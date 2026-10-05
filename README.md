@@ -59,10 +59,10 @@ Python 3.11 · LangGraph · LangChain (Anthropic / OpenAI) · FastAPI · SQLAlch
 ## 🚀 Quick start (Docker)
 
 ```bash
-git clone <your-repo-url>
+git clone <repo-url>
 cd agentic-data-scientist
 cp .env.example .env          # Windows: copy .env.example .env
-# edit .env: add ANTHROPIC_API_KEY, or set LLM_PROVIDER=none
+# edit .env: add API_KEY, or set LLM_PROVIDER=none
 docker compose up --build
 ```
 
@@ -176,6 +176,3 @@ agentic-data-scientist/
 2. Add or update tests (`make test`) and eval cases (`make eval`)
 3. Open a pull request describing the change
 
-## 📄 License
-
-Add a license of your choice (e.g. MIT) as `LICENSE` before publishing.
