@@ -1,0 +1,25 @@
+- name: churn_drivers
+  dataset: churn
+  question: "What factors drive customer churn and how well can we predict it?"
+  expect:
+    intent: predictive
+    target: churn
+    task_type: classification
+    top_features_any: [contract, tenure, support_calls, monthly_charges]
+    min_lift: 0.05
+- name: house_price
+  dataset: housing
+  question: "Predict price from the other attributes. Which ones matter most?"
+  expect:
+    intent: predictive
+    target: price
+    task_type: regression
+    top_features_any: [area, neighborhood]
+    min_lift: 0.3
+- name: regional_revenue
+  dataset: sales
+  question: "Which region generates the highest total revenue?"
+  expect:
+    intent: descriptive
+    sql_contains: region
+    sql_top_row_contains: east
